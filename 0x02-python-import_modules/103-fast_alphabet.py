@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-import string
-alph = string.acsii_uppercase
-print(str(alph))
+def printAlphabet():
+    str = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"
+    print(str)
