@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 def no_c(my_string):
-    my_string1 = list(my_string)
-    index = my_string1.index("c" or "C")
-    my_string1 = my_string1[:index] + my_string1[index+1:]
-    return my_string1
+    new_string = ""
+    for c in my_string:
+        if c not in "cC":
+            new_string += c
+    return new_string
