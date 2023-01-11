@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 def complex_delete(a_dictionary, value):
-    keys_to_remove = [key for key in a_dictionary if a_dictionary[key] == value]
-    for key in keys_to_remove:
-        del a_dictionary[key]
+    new_dic = list(a_dictionary.keys())
+    {a_dictionary.pop(key) for key in new_dic if a_dictionary[key] == value}
+    return (a_dictionary)
