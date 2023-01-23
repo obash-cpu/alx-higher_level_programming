@@ -6,7 +6,7 @@ def safe_print_list_integers(my_list=[], x=0):
             if isinstance(my_list[i], int):
                 print("{:d}".format(my_list[i]), end=' ')
                 count += 1
-        except:
-            raise IndexError("x is bigger than the length of my_list.")
+        except (TypeError, ValueError):
+            continue
         print()
         return count
