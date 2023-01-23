@@ -5,4 +5,4 @@ def raise_exception():
         b = "name"
         print(a / b)
     except TypeError:
-        print()
+        print("this is a type error")
