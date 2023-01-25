@@ -6,15 +6,15 @@ class Square:
     """Class defined for square generation.
     """
     def __init__(self, size=0):
-        # attribute assigment here engages setters defined below
+
         self.size = size
-        @property
+
         def size(self):
             """__size getter, setter with same method name
             """
 
             return self.__size
-        @size.setter
+
         def size(self, value):
             """Args:
                 value (int): length of one side of square
