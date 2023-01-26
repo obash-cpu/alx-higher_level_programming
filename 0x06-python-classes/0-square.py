@@ -5,6 +5,6 @@ it contains no attribues
 
 class Square:
     """given the class is empty,
-    it should be passed
+         it should be passed
     """
     pass
