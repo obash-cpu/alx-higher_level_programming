@@ -2,6 +2,9 @@
 """
     create a class rectangle
 """
+
+
+
 class Rectangle:
 
 
