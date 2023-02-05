@@ -4,6 +4,15 @@
     it divides the elements of a matrix
 """
 def matrix_divided(matrix, div):
+    """
+        Divides all elements of a matrix
+    Args:
+        matrix: intial 2D list
+        div: integer which is the divisor
+    Returns:
+        New matrix containing the divided elements
+        rounded to 2 decimal places
+    """
     if not (isinstance(matrix, (int, float)) for lst in matrix for i in lst):
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
     if not (len(matrix[0])) = len(lst) for lst in matrix):
