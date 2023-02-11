@@ -4,7 +4,8 @@
 
 
 def say_my_name(first_name, last_name=""):
-    """prnts the first name and last name and raises a type error if the name is not  astr"""
+    """prnts the first name and last name
+    and raises a type error if the name is not  astr"""
     if type(first_name) != str: 
         raise TypeError ("first_name must be a string")
     if type(last_name) != str:
