@@ -9,3 +9,5 @@ def lookup(obj):
         Return: The attributes and the methods of an object
     """
     return dir(obj)
+
+if __name__ == "__main__"
