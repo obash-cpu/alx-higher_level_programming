@@ -2,6 +2,7 @@
 
 """Class mylist that inherits from list"""
 
+
 def Mylist(list):
 
     pass
