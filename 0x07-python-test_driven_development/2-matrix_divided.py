@@ -3,6 +3,8 @@
     This is the divide module.
     it divides the elements of a matrix
 """
+
+
 def matrix_divided(matrix, div):
     """
         Divides all elements of a matrix
