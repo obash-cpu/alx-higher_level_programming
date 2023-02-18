@@ -1,40 +1,45 @@
 #!/usr/bin/python3
+""" Class Square that defines a square by
+    Private instance attribute: size
+    Getter and Setters
+    Instantiation with optional size
+    size must be an integer
+    Public instance method: def area(self)
+    Public instance method: def my_print(self)
 """
-    Square generation module for Python project 0x06
-"""
+
+
 class Square:
-    """Class defined for square generation.
-
-    Args:
-        size (int): length of one side of square
-
-    Attributes:
-        __size (int): length of one side of square
-
-    """
-
+    """Class constructor"""
     def __init__(self, size=0):
-        # attribute assigment here engages setters defined below
-        self.size = size
+        if type(size) != int:
+            raise TypeError('size must be an integer')
+        if size < 0:
+            raise ValueError('size must be >= 0')
+        self.__size = size
 
-        @property
-     def size(self):
-         """__size getter, setter with same method name
-            Returns:
-                area (int): length of one side, squared
-         """
-         area = self.__size * self.__size
+    """Size getter"""
+    @property
+    def size(self):
+        return self.__size
 
-         return area
-     def my_print(self):
-         """Prints text representation of square in hash chars.
+    """Size setter"""
+    @size.setter
+    def size(self, value):
+        if type(value) != int:
+            raise TypeError('size must be an integer')
+        if value < 0:
+            raise ValueError('size must be >= 0')
+        self.__size = value
 
-         Attributes:
-            __size (int): length of one side of square
-        """
-        for row in range(0, self.__size):
-            for col in range(0, self.__size):
-                print("#", end="")
-                print()
-        if self.__size is 0:
+    """returns the current square area"""
+    def area(self):
+        return self.__size ** 2
+
+    """prints in stdout the square with the character #"""
+    def my_print(self):
+        if self.size != 0:
+            for ch in range(self.size):
+                print('#' * self.size)
+        else:
             print()
