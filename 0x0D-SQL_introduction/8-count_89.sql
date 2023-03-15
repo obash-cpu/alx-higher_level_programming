@@ -1,2 +1,2 @@
--- adding a new row in a table
-INSERT INTO `first_table` (`id`, `name`) VALUES (98, ");
+-- displays records with id=89
+SELECT COUNT(*) FROM first_table;
