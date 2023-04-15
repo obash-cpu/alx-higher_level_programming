@@ -9,7 +9,7 @@ if __name__ == "__main__":
 
     db = MySQLdb.connect(user=argv[0],
                          passwd='root',
-                         db=argv[2]
+                         db=argv[1]
                          )
     mycur = db.cursor()
     mycur.execute("SELECT * FROM states ORDER BY state.id")
