@@ -7,9 +7,9 @@ if __name__ == "__main__":
     import MySQLdb
     from sys import argv
 
-    db = MySQLdb.connect(user=argv[1],
-                         passwd=argv[2],
-                         db=argv[3]
+    db = MySQLdb.connect(user=argv[0],
+                         passwd=argv[1],
+                         db=argv[2]
                          )
     mycur = db.cursor()
     mycur.execute("SELECT * FROM states ORDER BY state.id")
