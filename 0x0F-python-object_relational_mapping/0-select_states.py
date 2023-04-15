@@ -1,20 +1,20 @@
 #!/usr/bin/python3
+"""
+Task 0 - Write a script that lists all states from the database hbtn_0e_0_usa
+"""
 
-    """ ensure the file is executed"""
-        if __name__ == '__main__':
-     """ importing modules to be used """
-
+if __name__ == "__main__":
     import MySQLdb
-    import sys
+    from sys import argv
 
-    """ conect to the the database """
-
-    db = MySQLdb.connect(host='localhost', port=3306,
-        user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
-
-    """ use cursor function to querry the database """
-    mycursor = db.cursor()
-    mycursor.conect("SELECT * FROM  states ORDERED BY states.id ASC;")
-        rows = cur.fetchall()
-            for row in rows:
-            print(row)
+    db = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
+                         passwd=argv[2], db=argv[3], charset="utf8")
+    mycur = db.cursor()
+    mycur.execute("SELECT * FROM states ORDER BY state.id")
+    rows = cur.fetchall()
+    for row in rows:
+        print(row)
+        """closing the cursor"""
+    cur.close()
+    """closing the database"""
+    db.close()
