@@ -8,7 +8,7 @@ if __name__ == "__main__":
     from sys import argv
 
     db = MySQLdb.connect(user=argv[0],
-                         passwd=argv[1],
+                         passwd='root',
                          db=argv[2]
                          )
     mycur = db.cursor()
