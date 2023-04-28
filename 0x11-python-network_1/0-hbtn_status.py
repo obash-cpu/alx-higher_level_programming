@@ -3,7 +3,7 @@
 import urllib.request as Request
 
 if __name__ == "__main__":
-    with Request.urlopen('https://alx-intranet.hbtn.io/status') as response
+    with Request.urlopen("https://alx-intranet.hbtn.io/status") as response
     content = page.read()
         print("Body response:")
         print("\t- type: {}".format(type(content)))
